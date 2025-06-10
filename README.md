@@ -1,22 +1,22 @@
 # Leaf Classification
 
-Proyek ini bertujuan untuk mengklasifikasikan jenis daun menggunakan deep learning dengan berbagai arsitektur CNN. Terdapat dua jenis preprocessing: standar dan multicolor (khusus daun Dracaena/bambu rezeki putih).
+This project aims to classify leaf types using deep learning with various CNN architectures. There are two types of preprocessing: standard and multicolor (specifically for Dracaena/lucky bamboo leaves).
 
 ---
 
 ## Preprocessing
 
-### 1. Preprocessing Standar
-Digunakan untuk sebagian besar daun:
-- **Cropping & Rotate:** Memotong dan merotasi gambar agar objek daun terpusat.
-- **Brightening:** Meningkatkan kecerahan gambar.
-- **Median Blur (Denoising):** Mengurangi noise pada gambar.
-- **Thresholding Binary (Binarize):** Mengubah gambar menjadi biner (hitam-putih).
-- **Get Biggest Scratch:** Mengambil area daun terbesar.
-- **Replace White:** Mengganti latar belakang putih.
+### 1. Standard Preprocessing
+Used for most leaves:
+- **Cropping & Rotate:** Crop and rotate images to center the leaf object.
+- **Brightening:** Increase image brightness.
+- **Median Blur (Denoising):** Reduce noise in the image.
+- **Thresholding Binary (Binarize):** Convert the image to binary (black and white).
+- **Get Biggest Scratch:** Extract the largest leaf area.
+- **Replace White:** Replace the white background.
 
-### 2. Multicolor Preprocessing (Khusus Dracaena)
-Digunakan untuk daun Dracaena/bambu rezeki putih:
+### 2. Multicolor Preprocessing (For Dracaena Only)
+Used for Dracaena/lucky bamboo leaves:
 - **Cropping & Rotate**
 - **Brightening**
 - **Binarize Multicolor**
@@ -28,29 +28,29 @@ Digunakan untuk daun Dracaena/bambu rezeki putih:
 - **Get Biggest Scratch**
 - **Replace White**
 
-> **Catatan:**  
-> Multicolor preprocessing hanya digunakan untuk daun Dracaena/bambu rezeki putih.
+> **Note:**  
+> Multicolor preprocessing is only used for Dracaena/lucky bamboo leaves.
 
 ---
 
 ## Workflow
 
 1. **Split Data**
-   - Pisahkan data menjadi train, test, dan validating.
-   - Lakukan split data ke train & test.
+   - Split the data into train, test, and validation sets.
+   - Perform data split for train & test.
 
 2. **Preprocessing**
-   - Terapkan preprocessing standar untuk daun biasa.
-   - Terapkan multicolor preprocessing untuk daun Dracaena.
+   - Apply standard preprocessing for regular leaves.
+   - Apply multicolor preprocessing for Dracaena leaves.
 
 3. **Training**
-   - Latih model dengan berbagai arsitektur CNN (AlexNet, LeNet5, ResNet50, LeafNet, Custom1, Custom2).
+   - Train the model with various CNN architectures (AlexNet, LeNet5, ResNet50, LeafNet, Custom1, Custom2).
 
 4. **Validation**
-   - Validasi model menggunakan data validasi.
+   - Validate the model using the validation data.
 
 5. **Predict**
-   - Prediksi jenis daun pada data baru menggunakan model terlatih.
+   - Predict the leaf type on new data using the trained model.
 
 ---
 
@@ -61,11 +61,11 @@ Digunakan untuk daun Dracaena/bambu rezeki putih:
 - OpenCV
 - NumPy
 - scikit-learn
-- Google Colab (disarankan)
+- Google Colab (recommended)
 
 ---
 
-## Hasil Akurasi & Loss Model
+## Model Accuracy & Loss Results
 
 | Architecture     | Top 1 Acc | Top 1 Loss | Top 1 Val Acc | Top 1 Val Loss | Top 5 Acc | Top 5 Loss | Top 5 Val Acc | Top 5 Val Loss |
 |-----------|-----------|------------|---------------|---------------|-----------|------------|---------------|---------------|
@@ -76,21 +76,21 @@ Digunakan untuk daun Dracaena/bambu rezeki putih:
 | Custom1   | 0.9706    | 0.0733     | 0.9453        | 0.2361        | 0.9754    | 0.0737     | 0.9537        | 0.1060        |
 | Custom2   | 0.9738    | 0.0689     | 0.9060        | 0.2579        | 0.9765    | 0.0638     | 0.9198        | 0.2935        |
 
-**Keterangan:**
-- **Acc:** Akurasi pada data training
-- **Loss:** Loss pada data training
-- **Val Acc:** Akurasi pada data validasi
-- **Val Loss:** Loss pada data validasi
+**Description:**
+- **Acc:** Accuracy on training data
+- **Loss:** Loss on training data
+- **Val Acc:** Accuracy on validation data
+- **Val Loss:** Loss on validation data
 
 ---
 
-Tabel di atas menunjukkan performa masing-masing arsitektur model pada klasifikasi daun, baik untuk Top 1 maupun Top 5 prediksi terbaik.
+The table above shows the performance of each model architecture for leaf classification, both for Top 1 and Top 5 best predictions.
 
 ---
 
 ## Confusion Matrix
 
-Berikut adalah contoh confusion matrix beserta akurasi dari beberapa arsitektur CNN yang digunakan:
+Below are confusion matrices and accuracy values from several CNN architectures used:
 
 | AlexNet | LeNet5 | ResNet50 |
 |---------|--------|----------|
@@ -100,10 +100,10 @@ Berikut adalah contoh confusion matrix beserta akurasi dari beberapa arsitektur 
 |---------|---------|---------|
 | ![leafnet](./confusion_matrix/leafnet.png) | ![custom1](./confusion_matrix/custom1.png) | ![custom2](./confusion_matrix/custom2.png) |
 
-Setiap gambar menampilkan confusion matrix dan nilai akurasi akhir dari model terkait.
+Each image shows the confusion matrix and the final accuracy value of the corresponding model.
 
-## Implementasi API
+## API Implementation
 
-Implementasi API untuk proyek ini tersedia di [https://github.com/hafiizhekom/daunesia-api](https://github.com/hafiizhekom/daunesia-api).
+The API implementation for this project is available at [https://github.com/hafiizhekom/daunesia-api](https://github.com/hafiizhekom/daunesia-api).
 
 ---
