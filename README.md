@@ -65,6 +65,12 @@ Used for Dracaena/lucky bamboo leaves:
 
 ---
 
+## Dataset
+
+You can get dataset from [IEEE Dataport - Five Class Indonesian Plant Species Leaf Image Dataset](https://ieee-dataport.org/documents/five-class-indonesian-plant-species-leaf-image-dataset)
+
+---
+
 ## Model Accuracy & Loss Results
 
 | Architecture     | Top 1 Acc | Top 1 Loss | Top 1 Val Acc | Top 1 Val Loss | Top 5 Acc | Top 5 Loss | Top 5 Val Acc | Top 5 Val Loss |
