@@ -4,6 +4,20 @@ This project aims to classify leaf types using deep learning with various CNN ar
 
 ---
 
+## Dataset
+
+You can get dataset from:
+- [IEEE Dataport - Five Class Indonesian Plant Species Leaf Image Dataset](https://ieee-dataport.org/documents/five-class-indonesian-plant-species-leaf-image-dataset)
+-  [Kaggle - Five Class Indonesian Plant Species Leaf](https://www.kaggle.com/datasets/hafiizhekom/five-class-indonesian-plant-species-leaf/)
+
+---
+
+## Research
+
+You can check my research about species classification from: [Academia.edu](https://www.academia.edu/129886398/Klasifikasi_Spesies_Tumbuhan_berdasarkan_Gambar_Daun_dengan_Algoritma_Convolutional_Neural_Network)
+
+---
+
 ## Preprocessing
 
 ### 1. Standard Preprocessing
@@ -36,8 +50,7 @@ Used for Dracaena/lucky bamboo leaves:
 ## Workflow
 
 1. **Split Data**
-   - Split the data into train, test, and validation sets.
-   - Perform data split for train & test.
+   - Split the data into train, validation, and testing sets.
 
 2. **Preprocessing**
    - Apply standard preprocessing for regular leaves.
@@ -46,8 +59,8 @@ Used for Dracaena/lucky bamboo leaves:
 3. **Training**
    - Train the model with various CNN architectures (AlexNet, LeNet5, ResNet50, LeafNet, Custom1, Custom2).
 
-4. **Validation**
-   - Validate the model using the validation data.
+4. **Testing**
+   - Testing the model using the testing data.
 
 5. **Predict**
    - Predict the leaf type on new data using the trained model.
@@ -62,14 +75,6 @@ Used for Dracaena/lucky bamboo leaves:
 - NumPy
 - scikit-learn
 - Google Colab (recommended)
-
----
-
-## Dataset
-
-You can get dataset from:
-- [IEEE Dataport - Five Class Indonesian Plant Species Leaf Image Dataset](https://ieee-dataport.org/documents/five-class-indonesian-plant-species-leaf-image-dataset)
--  [Kaggle - Five Class Indonesian Plant Species Leaf](https://www.kaggle.com/datasets/hafiizhekom/five-class-indonesian-plant-species-leaf/)
 
 ---
 
