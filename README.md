@@ -67,7 +67,9 @@ Used for Dracaena/lucky bamboo leaves:
 
 ## Dataset
 
-You can get dataset from [IEEE Dataport - Five Class Indonesian Plant Species Leaf Image Dataset](https://ieee-dataport.org/documents/five-class-indonesian-plant-species-leaf-image-dataset)
+You can get dataset from:
+- [IEEE Dataport - Five Class Indonesian Plant Species Leaf Image Dataset](https://ieee-dataport.org/documents/five-class-indonesian-plant-species-leaf-image-dataset)
+-  [Kaggle - Five Class Indonesian Plant Species Leaf](https://www.kaggle.com/datasets/hafiizhekom/five-class-indonesian-plant-species-leaf/)
 
 ---
 
